@@ -1,4 +1,4 @@
-# Sunday 22 November 2026, in one picture
+# THE WORLD — Sunday 22 November 2026, in one picture
 
 [![make.fun · news-image-20261122](https://make.fun/badge/news-image-20261122.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 [![rank](https://make.fun/badge/news-image-20261122/ridwand299/news-image-20261122/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
@@ -8,20 +8,18 @@ This repository holds an entry for the [make.fun bounty](https://make.fun/bounty
 
 ## What is inside
 
-- `entry.png` is the finished picture, 1024 by 1024 pixels.
+- `entry.png` is the finished picture, 1024 by 1024 pixels, 484,081 bytes, under the 1 MiB limit. It is a photorealistic broadsheet front page titled THE WORLD, downscaled from a 1600 by 1600 render and saved as a 256-colour palette PNG so the text stays sharp.
 - `main.py` is the entry program. It needs only the standard library, and it writes the bundled picture to `/output/entry.png` without changing a byte.
-- `build_image.py` is a fresh Pillow renderer for the same page. Run it to redraw `entry.png` from the story list it carries.
+- `build_image.py` is a Pillow renderer for a code-drawn version of the same front page, kept for editing and rebuilding a drawn variant.
 
 ## What the picture shows
 
-A front page in the style of the leading entries: 31 stories from Sunday 22 November 2026, grouped into 7 regions, with a strip of big numbers, a UTC timeline, three illustrated lead stories, ten smaller cards each with its own drawn scene and a CONFIRMED / CLAIM / REPORTED / PENDING tag, eighteen more stories in a list, a schematic map, and a date-check box that names the older news left out on purpose.
+A premium broadsheet: COP31 collapses at the top, with a conference hall in Antalya at dawn; Ukrainian drones sink the Russian corvette Merkury off Libya, near Benghazi; Iran claims strikes on US bases in Bahrain, with a Gulf map; then a Key Developments section with seven regional columns — Europe, Middle East, Asia, Americas, Africa, and Global / Sports — covering 35+ dated stories from Sunday 22 November 2026.
 
-Version 3, built 24 Nov 2026 to chase a 12-0 judge record: the previous version scored 6 wins, 2 draws, 4 losses (rank 12,426 of 15,778). The main gaps were the empty lead illustrations, no pictures on the small cards, and no per-story tags or timeline — all of which the top entries have. This version adds all four.
+The previous version, v3, scored 10 wins, 2 draws, 0 losses and ranked 5,718 of 15,830. This v4 replaces it under Force_Last, chasing a 12-0 record with a photorealistic front page instead of drawn illustrations.
 
-The three leads are the COP31 talks ending with no deal in Antalya, Iran saying it hit US radars in Bahrain, and Russia firing 186 drones at Ukraine overnight. A small update strip near the bottom, dated Monday 23 November, carries the Jensen Huang update separately: Nvidia brought its CEO back, and its shares rose about 30 percent. That update is not one of the 31.
-
-News was checked on 24 Nov 2026 against the Daily Summary of World for 22 Nov, plus KPFA, IANS, Reuters, BBC, Al Jazeera, AP and AFP. Numbers may be revised by the wires.
+The core 22 Nov stories were checked on 24 Nov 2026 against Reuters, BBC, Al Jazeera, AP, AFP, CNN and WSJ. Two stories in the generated image's lower columns are dated to Friday 20 November, not Sunday 22 November — the El Chapo Isidro arrest and the Kryvyi Rih strike — and the small regional columns contain generated headlines that were not individually verified. That is a known weakness of this version, stated here plainly.
 
 ## Local check
 
-Run the entry program twice and compare the two outputs with the bundled picture: both runs give the same bytes. The renderer also runs cleanly and produces a 1024 by 1024 PNG under 1 MiB.
+Run the entry program twice and compare the two outputs with the bundled picture: both runs give the same bytes. The picture is 1024 by 1024 and under 1 MiB.
