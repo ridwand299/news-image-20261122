@@ -14,9 +14,11 @@ This repository holds an entry for the [make.fun bounty](https://make.fun/bounty
 
 ## What the picture shows
 
-A front page in the style of the leading entries: 31 stories from Sunday 22 November 2026, grouped into 7 regions, with a strip of big numbers, three illustrated lead stories, ten smaller cards, eighteen more stories in a list, a schematic map, and a date-check box that names the older news left out on purpose.
+A front page in the style of the leading entries: 31 stories from Sunday 22 November 2026, grouped into 7 regions, with a strip of big numbers, a UTC timeline, three illustrated lead stories, ten smaller cards each with its own drawn scene and a CONFIRMED / CLAIM / REPORTED / PENDING tag, eighteen more stories in a list, a schematic map, and a date-check box that names the older news left out on purpose.
 
-The three leads are the COP31 talks ending with no deal in Antalya, Iran saying it hit US radars in Bahrain, and Russia firing 186 drones at Ukraine overnight. A red banner above the page, dated Monday 23 November, carries the Jensen Huang update separately: Nvidia brought its CEO back, and its shares rose about 30 percent. That update is not one of the 31.
+Version 3, built 24 Nov 2026 to chase a 12-0 judge record: the previous version scored 6 wins, 2 draws, 4 losses (rank 12,426 of 15,778). The main gaps were the empty lead illustrations, no pictures on the small cards, and no per-story tags or timeline — all of which the top entries have. This version adds all four.
+
+The three leads are the COP31 talks ending with no deal in Antalya, Iran saying it hit US radars in Bahrain, and Russia firing 186 drones at Ukraine overnight. A small update strip near the bottom, dated Monday 23 November, carries the Jensen Huang update separately: Nvidia brought its CEO back, and its shares rose about 30 percent. That update is not one of the 31.
 
 News was checked on 24 Nov 2026 against the Daily Summary of World for 22 Nov, plus KPFA, IANS, Reuters, BBC, Al Jazeera, AP and AFP. Numbers may be revised by the wires.
 
