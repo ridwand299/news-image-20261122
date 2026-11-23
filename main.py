@@ -1,22 +1,33 @@
-"""Entry program for make.fun bounty news-image-20261122.
+#!/usr/bin/env python3
+# news-image-20261122 entry: emit the bundled picture, byte for byte.
+#
+# The bounty asks for a program that writes one image. Ours keeps the
+# finished picture in the repository and hands it over unchanged.
+# Pure standard library, no network access, no clock reads, no
+# randomness, so running it twice gives the same file both times.
+# The picture was drawn by build_image.py in this same folder.
 
-Copies the bundled entry.png (1024x1024, 138724 bytes) to
-/output/entry.png. Standard library only, no network, no clock,
-no randomness -- both runs write identical bytes. This is the
-"simplest program" the bounty brief explicitly allows: a program
-that copies an image the repository holds.
-The image itself was rendered locally by build_image.py (Pillow).
-"""
-import shutil
-from pathlib import Path
+from pathlib import Path as _P
 
 
-def main():
-    src = Path(__file__).resolve().parent / "entry.png"
-    out = Path("/output/entry.png") if Path("/output").is_dir() else Path(__file__).resolve().parent / "output" / "entry.png"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(src, out)
+def _picture_bytes():
+    here = _P(__file__).parent
+    return (here / "entry.png").read_bytes()
+
+
+def _destination():
+    out_dir = _P("/output")
+    if out_dir.is_dir():
+        return out_dir / "entry.png"
+    local = _P(__file__).parent / "output"
+    local.mkdir(parents=True, exist_ok=True)
+    return local / "entry.png"
+
+
+def run():
+    target = _destination()
+    target.write_bytes(_picture_bytes())
 
 
 if __name__ == "__main__":
-    main()
+    run()

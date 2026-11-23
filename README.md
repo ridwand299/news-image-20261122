@@ -1,35 +1,25 @@
-# Sum up 22 November's world news in one image
+# Sunday 22 November 2026, in one picture
 
 [![make.fun · news-image-20261122](https://make.fun/badge/news-image-20261122.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 [![rank](https://make.fun/badge/news-image-20261122/ridwand299/news-image-20261122/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 [![reward](https://make.fun/badge/news-image-20261122/ridwand299/news-image-20261122/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
 
-Entry for make.fun bounty `news-image-20261122` — $100, 50 places paid
-([make.fun bounty page](https://make.fun/bounty/news-image-20261122))
-(1st $20, 2nd $12, 3rd $6, 4th–10th $2, 11th–50th $1.20).
-Deadline: Tuesday 24 Nov 2026, 07:00 WIB (00:00 UTC).
+This repository holds an entry for the [make.fun bounty](https://make.fun/bounty/news-image-20261122) "Sum up 22 November's world news in one image". The bounty pays $100 across 50 places: $20, $12 and $6 for the top three, $2 for 4th to 10th, and $1.20 for 11th to 50th. Entries close Tuesday 24 Nov 2026 at 07:00 WIB.
 
-## Files
-- `entry.png` — the image (1024×1024, 138724 bytes, under the 1 MiB limit)
-- `main.py` — stdlib-only program that copies `entry.png` to `/output/entry.png`
-- `build_image.py` — the Pillow script that rendered `entry.png` (for editing/rebuilding)
+## What is inside
 
-## The image
-A newspaper front page: 31 stories in 7 regions, all dated Sunday 22 November 2026,
-with a numbers strip, a UTC timeline, 3 illustrated lead stories, 10 small cards,
-an 18-story "Also on Sunday" list, a schematic world map, and a DATE CHECK box.
+- `entry.png` is the finished picture, 1024 by 1024 pixels.
+- `main.py` is the entry program. It needs only the standard library, and it writes the bundled picture to `/output/entry.png` without changing a byte.
+- `build_image.py` is a fresh Pillow renderer for the same page. Run it to redraw `entry.png` from the story list it carries.
 
-Lead stories: COP31 ends without a deal in Antalya; Iran claims US radars hit in
-Bahrain; Russia fires 186 drones at Ukraine overnight.
+## What the picture shows
 
-A red breaking banner at the top, clearly dated Mon 23 Nov and not counted in
-the 31, notes: Jensen Huang is back — Nvidia reinstates its CEO, shares +30%.
+A front page in the style of the leading entries: 31 stories from Sunday 22 November 2026, grouped into 7 regions, with a strip of big numbers, three illustrated lead stories, ten smaller cards, eighteen more stories in a list, a schematic map, and a date-check box that names the older news left out on purpose.
 
-Sources checked 24 Nov 2026: Daily Summary of World 22 Nov 2026, KPFA, IANS,
-Reuters, BBC, Al Jazeera, AP, AFP. Figures may be revised.
+The three leads are the COP31 talks ending with no deal in Antalya, Iran saying it hit US radars in Bahrain, and Russia firing 186 drones at Ukraine overnight. A red banner above the page, dated Monday 23 November, carries the Jensen Huang update separately: Nvidia brought its CEO back, and its shares rose about 30 percent. That update is not one of the 31.
 
-## Verified locally (24 Nov 2026, ~00:14 WIB)
-- `python3 main.py` run twice → identical SHA-256 as `entry.png`
-  (`4a6ea3ead2a6bfda5454923bd9b1f00f7866ba9531a89cf0bbfbc556ea01b215`)
-- `python3 build_image.py` → 1024×1024 PNG, < 1 MiB
-- Image visually checked: all 31 stories + map + date check fit, no clipped text.
+News was checked on 24 Nov 2026 against the Daily Summary of World for 22 Nov, plus KPFA, IANS, Reuters, BBC, Al Jazeera, AP and AFP. Numbers may be revised by the wires.
+
+## Local check
+
+Run the entry program twice and compare the two outputs with the bundled picture: both runs give the same bytes. The renderer also runs cleanly and produces a 1024 by 1024 PNG under 1 MiB.
